@@ -33,6 +33,9 @@
         doc/**/*.txt
         # 本地gitignore地址
         .git>info>exclude
+        [参考](http://stackoverflow.com/questions/1753070/git-ignore-files-only-locally)
+        Note, if you already have unstaged changes you must run the following after editing your ignore-patterns:
+        git update-index --assume-unchanged [<file>...]
 
 
 #一次完整的工作流

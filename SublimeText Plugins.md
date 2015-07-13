@@ -4,8 +4,6 @@
 * BracketHighlighter,
 * ConvertToUTF8,
 * CSScomb,
-* CTags,
-    - 需下载Ctags软件，安装后将cTags.exe加入环境变量
 * DocBlockr,
 * Emmet,
 * FileDiffs,
