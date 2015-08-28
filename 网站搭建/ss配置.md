@@ -7,7 +7,7 @@ ubuntu:
     cd /etc/
     vi ss.json
     {
-        "server":"128.199.216.140",
+        "server":"*.*.*.*",
         "server_port":8388,
         "local_address": "127.0.0.1",
         "local_port":1080,
@@ -16,7 +16,6 @@ ubuntu:
         "method":"rc4-md5",
         "fast_open": false
     }
-    "server":"45.55.11.194",
 
 后台运行
 `ssserver -c ss.json -d start`

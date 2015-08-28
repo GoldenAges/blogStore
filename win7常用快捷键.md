@@ -7,7 +7,6 @@
 　　 7、cmd.exe:CMD命令提示符
 　　 8、certmgr.msc:证书管理实用程序
 　　 9、Clipbrd:剪贴板查看器
-　　 10、dvdplay:DVD播放器
 　　 11、diskmgmt.msc:磁盘管理实用程序
 　　 12、dfrg.msc:磁盘碎片整理程序
 　　 13、devmgmt.msc:设备管理器
@@ -31,14 +30,10 @@
 　　 31、mobsync:同步命令
 　　 32、notepad:打开记事本
 　　 33、nslookup:网络管理的工具向导
-　　 34、narrator:屏幕“讲述人”
-　　 35、netstat:an(TC)命令检查接口
-　　 36、OptionalFeatures：打开“打开或关闭Windows功能”对话框
 　　 37、osk:打开屏幕键盘
 　　 38、perfmon.msc:计算机性能监测程序
 　　 39、regedt32:注册表编辑器
 　　 40、rsop.msc:组策略结果集
-　　 41、regedit.exe:注册表
 　　 42、services.msc:本地服务设置
 　　 43、sysedit:系统配置编辑器
 　　 44、sigverif:文件签名验证程序
