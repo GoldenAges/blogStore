@@ -1,0 +1,1 @@
+通过github同步你的Sublime配置
