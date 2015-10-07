@@ -4,7 +4,7 @@
 #Git的基础配置
 + 安装完后设置用户名，邮箱
     * git config --global user.name "Rich"
-    * git config --global user.email richardli9527@gmail.com
+    * git config --global user.email xxx@gmail.com
     * git config --global core.editor "'c:/user/sublime text 2.exe' -w"
     * git config --global color.ui true
     * git config --global core.autocrlf input
