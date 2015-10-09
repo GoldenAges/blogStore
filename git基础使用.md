@@ -11,9 +11,8 @@
 
 
 ##配置key
-* 本地生成  `ssh-keygen` , 保存在～/.ssh/id_rsa.pub
-* copy id_rsa.pub 中的内容
-* 粘贴到github的配置里面去
+* 本地生成  `ssh-keygen` ,保存在C:/User/.ssh/id_rsa.pub
+* 复制 id_rsa.pub 中的内容,粘贴到github的配置里面去
 * 测试成功与否 `ssh -T git@github.com`, 如果成功会有一段警告，yes即可
 
 + gitignore 的一些写法以及例子
