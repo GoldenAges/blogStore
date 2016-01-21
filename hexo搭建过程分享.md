@@ -4,7 +4,8 @@
 * http://wuchong.me/blog/2014/11/20/how-to-use-jacman/
 
 安装Node.js
-安装hexo的
+安装Git
+
 ```
 npm install hexo-cli -g
 npm install hexo --save
@@ -13,6 +14,37 @@ npm install hexo --save
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ```
+
+初始化文件夹
+```
+hexo init folder
+cd folder
+npm install
+```
+
+安装插件
+```
+npm install hexo-generator-index --save
+npm install hexo-generator-archive --save
+npm install hexo-generator-category --save
+npm install hexo-generator-tag --save
+npm install hexo-server --save
+npm install hexo-deployer-git --save
+npm install hexo-deployer-heroku --save
+npm install hexo-deployer-rsync --save
+npm install hexo-deployer-openshift --save
+npm install hexo-renderer-marked@0.2 --save
+npm install hexo-renderer-stylus@0.2 --save
+npm install hexo-generator-feed@1 --save
+npm install hexo-generator-sitemap@1 --save
+```
+
+查看本地效果
+`hexo -s`
+
+****
+[NexT](http://theme-next.iissnan.com/five-minutes-setup.html)主题安装
+
 
 一个很重要的初始思想，在github上搭建的hexo博客，应用场景是针对一台电脑的。
 如果你要跨电脑，请增加source分支，将相关代码放到这个分支上面去。
