@@ -7,7 +7,7 @@
     * git config --global user.email xxx@gmail.com
     * git config --global core.editor "'c:/user/sublime text 2.exe' -w"
     * git config --global color.ui true
-    * git config --global core.autocrlf input
+    * git config --global core.autocrlf false //换行符，crlf为windows下，lf为Linux下
 
 
 ##配置key
