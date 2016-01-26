@@ -1,4 +1,3 @@
-refer: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
 当你拥有一台新的 Linux Server 之后，为了增加安全性和易用性，你应该做这些初始化。
 一般来说初始登录都是 root，以 root 用户来操作服务器是极为不安全的，所以首要做的就是添加新用户
 1. 添加新用户
@@ -15,8 +14,4 @@ refer: https://www.digitalocean.com/community/tutorials/initial-server-setup-wit
 4. 使改变生效
     重启 ssh 服务 `service ssh restart`。重启之后不要登出，要先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变
 
-
-1. 使用 SFTP
-    https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
-    当你配置好 ssh 登陆之后，就可以使用 sftp 来传输文件了，下载一个支持SFTP协议的客户端（FileZilla），然后输入相关信息即可。
 
