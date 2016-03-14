@@ -42,6 +42,10 @@ npm install hexo-generator-sitemap@1 --save
 查看本地效果
 `hexo -s`
 
+
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+
+
 ****
 [NexT](http://theme-next.iissnan.com/five-minutes-setup.html)主题安装
 
