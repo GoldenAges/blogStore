@@ -59,5 +59,30 @@ select created_at, mobile_id, type, sum(number) as num from z_data_statistics wh
 在这个基础上再进行数据分析
 
 最终结果，一条SQL解决：行列转换以及
-select created_at, mobile_id, SUM(IF(type='close', number, 0)) + SUM(IF(type='open', number, 0)) as pv,  SUM(IF(type='normal', number, 0)) as uv from z_data_statistics where is_del="N" and created_at between 1459440000 and 1462032000  group by mobile_id order by pv desc;
+select created_at, mobile_id, SUM(IF(type='close', number, 0)) + SUM(IF(type='open', number, 0)) as pv,  SUM(IF(type='normal', number, 0)) as uv from z_data_statistics where is_del="N" and created_at > 1459440000 group by mobile_id order by pv desc;
 在这个基础上再进行数据分析
+
+
+多表联合查询
+
+select  mobile.name, static.created_at, static.mobile_id, SUM(IF(static.type='close', number, 0)) + SUM(IF(static.type='open', number, 0)) as pv, SUM(IF(static.type='normal', number, 0)) as uv from z_data_statistics as static, z_mobile_phone as mobile where mobile.id=static.mobile_id and static.is_del="N" and mobile.company=1 and static.created_at>1459440000 group by mobile.id order by pv desc;
+
+
+select  mobile.name as name, static.created_at, static.mobile_id as id, SUM(IF(static.type='close', number, 0)) + SUM(IF(static.type='open', number, 0)) as pv, SUM(IF(static.type='normal', number, 0)) as uv from z_data_statistics 
+as static right join z_mobile_phone as mobile on mobile.id=static.mobile_id
+where static.is_del="N" and mobile.company=1 and static.created_at>1459440000 group by mobile.id order by pv desc;
+
+, SUM(IF(s.type='close', number, 0)) + SUM(IF(s.type='open', number, 0)) as pv, SUM(IF(s.type='normal', number, 0)) as uv 
+
+select m.name, m.id, m.company, s.type, s.created_at from z_mobile_phone as m left join z_data_statistics as s on m.id=s.mobile_id where m.company=10;
+
+
+select m.name, m.id, s.type from z_mobile_phone as m left join z_data_statistics as s on m.id=s.mobile_id where m.is_del="N" and m.company=10
+
+ select m.name, m.id from z_mobile_phone as m left join z_data_statistics as s on m.id=s.mobile_id  where m.company=10 and m.is_del="N";
+
+134种手机
+
+
+
+
