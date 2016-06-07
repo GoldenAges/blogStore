@@ -19,7 +19,7 @@ kupTranslate = 'UPDATE zfix_warehouse SET '.$field.' = '.$stockTranslate['list']
 
 
 
-<pre>Array
+Array
 (
     [code] => 200
     [list] => Array
@@ -47,4 +47,3 @@ kupTranslate = 'UPDATE zfix_warehouse SET '.$field.' = '.$stockTranslate['list']
         )
 
 )
-<pre>
