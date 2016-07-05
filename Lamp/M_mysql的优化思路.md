@@ -22,3 +22,6 @@ MySql 入门级优化
 
 优化的第一步是明白如何查看SQL语句执行时间和效率
 MySql命令: [Explain 命令](http://dev.mysql.com/doc/refman/5.5/en/explain-output.html)
+MySql: 查看MySql日志查看查询资源和查询瓶颈
+
+
