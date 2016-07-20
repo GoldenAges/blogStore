@@ -15,8 +15,7 @@
 * 查看慢查询日志
 * explain 命令
 
-步骤
-
+## 使用Show Profile
 -  `select * from information_schema.profiling`;
 - show profile 
 
@@ -43,9 +42,13 @@ GROUP BY STATE
 ORDER BY total_r DESC;
 
 ```
+
+(分析结果)[]
+
+## 使用Show status
+
 - 使用status，虽然`show status`只能返回一些计数器数据，能显示某些活动的频繁程度，但无法给出消耗了多少时间，无法测量基于时间的绘画活动，单对于在执行完查询后观察某些计数器的值还是有帮助的。
 
-- 
 ```
 mysql> FLUSH STATUS;
 mysql> show status where variable_name like 'Handle%' or variable_name like 'Created%';
@@ -53,7 +56,20 @@ mysql> show status where variable_name like 'Handle%' or variable_name like 'Cre
 ![2016-07-19_17:50:42.jpg](http://7xscq6.com1.z0.glb.clouddn.com/2016-07-19_17:50:42.jpg)
 
 虽然explain 查看执行计划也可以获得大部分相同的信息，但是explain是通过估算得到的结果（对于一般的优化也够用了），而通过计数器则是实际测量的结果。
+[结果分析]
 
-- 使用慢查询日志
+## 使用慢查询日志(既可以用来分析整个查询过程，也可以分析单挑查询语句)
+
+在[安装](https://github.com/GoldenAges/blogStore/blob/master/Lamp/M_pt-query-digest.md)好Percona Toolkit后，可以通过pt-query-digest命令来来分析查询结果，首先你需要打开慢查询日志
+`>mysql set slow_query_log=1`, 查看慢查询日志的存储位置 `>mysql show variables like 'slow_query_log_file`,找到日志位置，然后通过命令`user> pt-query-digest filename`查看分析结果
+
+![2016-07-20_2016-07-20_14:59:25.jpg](http://7xscq6.com1.z0.glb.clouddn.com/2016-07-20_2016-07-20_14:59:25.jpg)
+
+## 使用Explain命令
+
+```
+Explain select no_sql_cache from ....;
+```
+[结果分析]()
 
 
