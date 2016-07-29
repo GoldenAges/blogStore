@@ -162,12 +162,17 @@ To undo a merge:
 ###撤销操作
 
 撤销commit
+    
+    $ git rm --cached //撤销最近一次commit（还没有push上服务器）
+
+    $ git reset file_name //撤销特定的文件
 
     $ git log //查看最近提交日志
-    $ git reset HEAD
-修改commit
+    $ git reset HEAD~2 //回退到两次commit之前（可以针对push到服务器上的commit）
 
-    $ git commit --amend
+修改commit(比如忘记提交某文件了，add之后可以使用这个命令)
+
+    $ git commit --amend forget_file_name
 
 撤销add
 
@@ -191,3 +196,54 @@ You should then add somedir/ to your .gitignore file so that git doesn't try and
 
 ####查看某个文件的更改记录
     git blame filename #git blame wp-config.php
+
+Your new feature isn't worth the time and you're going to delete it. But it has one commit that fills in `README` file, and you want this commit to be on the master as well
+
+1. `git log` 查找到那次commit
+2. git cherry-pick commit
+
+
+###修改任意commit
+1. 查找到commit 假设为aaabbbb
+2. git rebase -i aaabbb
+3. 修改 'pick' 为 'edit'
+4. git rebase --contiue
+
+###合并commit
+1. git rebase -i aaabb 
+2. 查看rebase 选项
+    
+    pick：正常选中
+    reword：选中，并且修改提交信息；
+    edit：选中，rebase时会暂停，允许你修改这个commit（参考这里）
+    squash：选中，会将当前commit与上一个commit合并
+    fixup：与squash相同，但不会保存当前commit的提交信息
+    exec：执行其他shell命令
+3. 根据需要选择
+
+1. 一种简单的方法 git reset --hard HEAD^5, 重新提交
+
+###合并某个分支的所有commit到master分支
+1. `git merge --squash` long-feature-branch
+
+###重新排列order顺序
+1. git rebase -i aaabbb
+2. 在编辑页面更改commit顺序
+
+###二分法查找bad commit
+[使用git来调试程序](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E4%BD%BF%E7%94%A8-Git-%E8%B0%83%E8%AF%95)
+
+###仅仅提交一个文件的部分修改
+`git add -e` //可编add信息
+
+###查看一些历史操作
+git reflog
+
+##回复被删除的commit
+
+
+
+
+
+
+
