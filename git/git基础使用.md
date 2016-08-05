@@ -234,7 +234,7 @@ Your new feature isn't worth the time and you're going to delete it. But it has 
 [使用git来调试程序](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E4%BD%BF%E7%94%A8-Git-%E8%B0%83%E8%AF%95)
 
 ###仅仅提交一个文件的部分修改
-`git add -e` //可编add信息
+`git add -e` //可edit add信息
 
 ###查看一些历史操作
 git reflog
