@@ -95,3 +95,18 @@ Your new feature isn't worth the time and you're going to delete it. But it has 
 
 ###查看一些历史操作
 git reflog
+
+###git 重命名
+
+    git mv old_name new_name
+
+相当于系统的三条命令
+
+    $ mv README.md README
+    $ git rm README.md
+    $ git add README
+
+
+
+
+
