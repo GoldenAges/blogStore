@@ -19,7 +19,6 @@ git diff --cached 可以查看add之后的内同和文件的差异
 ###撤销操作
 
 ####撤销commit
-    
     $ git rm --cached //撤销最近一次commit（还没有push上服务器）
 
     $ git reset file_name //撤销特定的文件
@@ -39,6 +38,18 @@ git diff --cached 可以查看add之后的内同和文件的差异
 ####撤销未add的文件
 
     $ git checout -f
+
+####删除untracked files 
+主要命令 git clean
+主要参数 
+  
+    -n #预览要删除的文件  
+    -f # 强制删除
+    -d #目录
+    -X #ignore files 
+
+1. `git clean -df -n #预览要删除的文件`
+2. `git clean -df`
 
 ##删除远程文件，保留本地
 
@@ -106,6 +117,13 @@ git reflog
     $ git rm README.md
     $ git add README
 
+###git 新建分支
+git checkout -b 'branch_name'
+推送到远程: git push -u origin 'branch_name'
+###git 删除分支
+http://stackoverflow.com/questions/2003505/how-to-delete-a-git-branch-both-locally-and-remotely
+1. 删除本地分支 `git branch -d branch_name`
+2. 删除远程分支 `git push origin --delete <branchName>`
 
 
 
