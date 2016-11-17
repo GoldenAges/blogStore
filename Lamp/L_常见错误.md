@@ -5,7 +5,7 @@
 重点：uid=1000 说明是第一个非系统用户，root 的 uid 是0
 原因：重启服务需要root权限
 
-2. ping 失败、
+2. ping 失败
 ```
 ping: icmp open socket: Operation not permitted
 sudo chmod u+s `which ping`
