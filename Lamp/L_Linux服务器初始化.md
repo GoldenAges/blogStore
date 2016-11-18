@@ -18,6 +18,7 @@ refer: https://www.digitalocean.com/community/tutorials/initial-server-setup-wit
     su
     passwd xxx(用户名)
 ```
+
 4. 使用安全的 ssh_key 来登陆
     ssh_key 的生成很简单 `ssh-keygen`, 这条命令会在 ～/.ssh/ 目录下生成 id_rsa 和 id_rsa.pub，即私钥和公钥。
 
