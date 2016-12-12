@@ -6,8 +6,8 @@
     su
     passwd xxx(用户名)
 ```
-3. 删除用户
 
+3. 删除用户
 ```
 sudo userdel -rf username
 ```
