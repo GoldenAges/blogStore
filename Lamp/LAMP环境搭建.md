@@ -57,18 +57,3 @@ sudo chkconfig mysqld on
 
     service httpd restart;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
