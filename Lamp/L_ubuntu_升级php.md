@@ -25,7 +25,6 @@ Now you should have the latest PHP version.
 如果在使用命令`apt-add-repository` 报错，那么应该这样：
 http://askubuntu.com/questions/493460/how-to-install-add-apt-repository-using-the-terminal
 try these:
-
     sudo apt-get install software-properties-common
 and/or
 

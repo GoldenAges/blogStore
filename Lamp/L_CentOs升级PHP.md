@@ -20,3 +20,5 @@ yum install yum-plugin-replace
 
 yum replace --enablerepo=webtatic-testing php-common --replace-with=php56w-common
 It will likely give you a message “WARNING: Unable to resolve all providers …”. This is normal, and you can continue by tying “y“. You will be given a chance to see what packages will be installed and removed before again being given a chance to confirm.
+
+如果显示模块冲突，可以选择使用上面替换的方法，或者先卸载旧版本的PHP，请参见
