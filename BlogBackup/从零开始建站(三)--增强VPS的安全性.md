@@ -1,22 +1,26 @@
-从零开始建站(三)--增强VPS的安全性
-  |  
+---
+title: 从零开始建站(三)--增强VPS的安全性
+date: 2017-02-16 11:51:20
+tags: 技术
+---
+
 当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。
 默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
 
-第一步：添加新用户，然后设置密码
+## 第一步：添加新用户，然后设置密码
 
 adduser username
-#授予root权限
+### 授予root权限
 ```
 gpasswd -a apple sudo
 ```
-第二步：禁止远程root登陆，修改默认端口
+## 第二步：禁止远程root登陆，修改默认端口
 
 既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在`/etc/ssh/sshd_config`里
 
-第三步：使改变生效
+### 第三步：使改变生效
 
-#重启ssh服务
+### 重启ssh服务
 ```
 service ssh restart
 ```
@@ -40,7 +44,7 @@ ssh-copy-id apple@SERVER_IP_ADDRESS
 增加防火墙设置，将多次尝试登录的IP地址加入黑名单
 添加安全证书的验证
 
-参考：
+## 参考：
 
 1. [一些增强 SSH 安全性的技巧](https://www.v2ex.com/t/211641)
 2. [Advanced SSH security tips and tricks](https://www.linux.com/learn/tutorials/305769-advanced-ssh-security-tips-and-tricks)

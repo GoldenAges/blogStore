@@ -1,6 +1,13 @@
-从零开始建站(一)--安装LAMP环境
+---
+title: 从零开始建站(一)--安装LAMP环境
+date: 2017-02-16 11:47:04
+tags: 技术
+---
+## 关于VPS
 
-&emsp;&emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，板瓦工）购买了一台虚拟主机之后，如何通过一步步的配置，使之成为一个能被正常访问的网站呢？Let’s try it step by step!
+&emsp;&emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
+
+&emsp;&emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，搬瓦工）购买了一台虚拟主机之后，如何通过一步步的配置，使之成为一个能被正常访问的网站呢？Let’s try it step by step!
 
 VPS提供商：Digitalocean
 服务器环境：Ubuntu 12.04.5 x64
@@ -8,23 +15,19 @@ VPS提供商：Digitalocean
 客户端：Windows7 旗舰版
 目的：配置LAMP环境
 
-关于VPS：
-
-&emsp;&emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
-
-关于LAMP：
+## 关于LAMP
 
 &emsp;&emsp;LAMP是一组用来搭建网站或者服务器的开源软件，他们本身都是独立的软件，LAMP则是Linux，Apache，MySQL，PHP的首字母缩写，因为我们使用的Ubuntu正是Linux的一个发行版，所以接下来只需要安装Apache，MySQL和PHP.
 
-#### 第一步：下载命令行客户端
+## 第一步：下载命令行客户端
 
 由于Windows系统自带的命令行界面并不支持ssh命令，故需先下载一个命令行客户端，putty，Git都可。
 
-#### 第二步：登录VPS
+## 第二步：登录VPS
 
 打开命令行客户端，输入ssh root@SERVER_IP_ADDRESS, SERVER_IP_ADDRESS 是指你购买的VPS给你分配的IP，可以在VPS提供商的后台管理查到。然后再键入密码,服务商一般会发送root密码到邮箱，即可登录远程“电脑”。以下的所有操作都是在登录之后进行的。
 
-#### 第三步：安装Apache
+## 第三步：安装Apache
 
 Apache是一个免费、开源的网络服务器，键入如下两条命令安装Apache
 
@@ -35,10 +38,9 @@ Apache是一个免费、开源的网络服务器，键入如下两条命令安�
 安装Apache
 
     sudo apt-get install apache2
-
 安装完之后在浏览器地址栏键入你的IP地址，若出现，即表明安装成功。So easy!
 
-#### 第四步：安装MySQL
+## 第四步：安装MySQL
 
 MySQL也是一个免费、开源的数据库，继续在命令行键入如下命令
 
@@ -48,7 +50,7 @@ MySQL也是一个免费、开源的数据库，继续在命令行键入如下命
 
 之后就会出现设置root密码，直接enter则密码为空
 
-#### 第五步：安装PHP
+## 第五步：安装PHP
 
 PHP是一门开源的网络脚本语言，通过如下命令安装PHP
 
@@ -56,7 +58,7 @@ PHP是一门开源的网络脚本语言，通过如下命令安装PHP
 
 PHP还有许多的扩展模块，通过他们可以实现很多其他功能，极大增强了语言的可扩展性。
 
-#### 第六步：安装PHP扩展
+## 第六步：安装PHP扩展
 
 通过命令`apt-cache search php5-`可以搜索到所有模块，然后按需安装。
 
@@ -82,7 +84,7 @@ PHP还有许多的扩展模块，通过他们可以实现很多其他功能，�
     php5-adodb - Extension optimising the ADOdb database abstraction library
     php5-auth-pam - A PHP5 extension for PAM authentication
 
-#### 第七步：查看phpinfo
+## 第七步：查看phpinfo
 
     sudo nano /var/www/info.php
 
