@@ -115,28 +115,6 @@ error: fatal: bad object HEAD
     git reset --hard origin/master
 
 
-## 删除分支操作
-### 删除本地分支 
-        git branch -D branchName
-### 删除远程分支
-        git push origin --delete branchName
-或者
-        
-        git push origin :branchName
-
-当出现删除错误
-
-    unable to push to unqualified destination:
-
-运行命令：
-
-    git fetch -p origin
-
-原因：本地目录信息没有同步远程，可能远程分支已经被删除
-
-参考：http://stackoverflow.com/questions/10292480/when-deleting-remote-git-branch-error-unable-to-push-to-unqualified-destinatio
-
-
 
 
 

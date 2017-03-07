@@ -1,8 +1,5 @@
 <?php 
 date_default_timezone_set('Asia/Shanghai');
-var_dump(strlen('123456789'));
-exit;
-$query = 0;
 
 if(empty($query)) {
 	echo "查询条件为空";
