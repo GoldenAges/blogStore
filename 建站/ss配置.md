@@ -19,7 +19,7 @@ ubuntu:
 
 后台运行
 
-    ssserver -c ss.json -d start`
+    ssserver -c ss.json -d start
 开机自启动
 
     vi /etc/rc.local

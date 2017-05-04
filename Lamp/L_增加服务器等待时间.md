@@ -10,7 +10,7 @@
 
 ```
 //编辑文件：
- ~/.ssh/config
+ ~/.sshd/config
 //在里边添加如下语句：
 ServerAliveInterval 60
 ServerAliveCountMax 1
