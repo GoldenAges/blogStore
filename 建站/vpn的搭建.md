@@ -14,7 +14,6 @@ sudo apt-get dist-upgrade
 
 Step 2. 使用 vim（或其他文本编辑器如 Notepad++）打开 /etc/pptpd.conf 文件：
 vim /etc/pptpd.conf
-键入“i”进入编辑模式，移动光标找到以下两行：
 #localip 192.168.0.1
 #remoteip 192.168.0.234-238,192.168.0.245
 修改为：
@@ -49,6 +48,6 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 第三步：到这里，服务器端的配置已经完成了。现在可在电脑或是手机等设备上，新建 PPTP 类型的 VPN 连接，输入 VPS 的 IP 地址以及之前配置的用户名和密码，即可连接自己的 VPN。当 VPS 重启后，需要重新进行第二步的 Step 6。如果拥有自己的域名，可以进行域名解析，将 http://vpn.yourdomain.com 指向 IP 地址，以便记忆。
 出现问题时，例如无法连接，可以登陆主机，输入如下命令后，再次尝试连接，并查看错误信息：
-tail -f /var/log/syslog
+tail -f /var/log/syslog | grep pptpd
 
 出现一般的问题可尝试重启 PPTP 服务。
