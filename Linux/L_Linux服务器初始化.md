@@ -34,7 +34,7 @@ refer: https://www.digitalocean.com/community/tutorials/initial-server-setup-wit
 
 6. 使改变生效
     重启 ssh 服务 `service ssh restart` 
-    对于centOS ``service sshd restart``
+    对于centOS `service sshd restart`
 
     重启之后不要登出，要先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变
     如果是centOS，可能会报错：
