@@ -7,7 +7,27 @@
     * git config --global user.email xxx@gmail.com
     * git config --global core.editor "'c:/user/sublime text 2.exe' -w"
     * git config --global color.ui true
-    * git config --global core.autocrlf false //换行符，crlf为windows下，lf为Linux下
+    * git config --global core.autocrlf input  //换行符，crlf为windows下，lf为Linux下
+
+    一、AutoCRLF
+    #提交时转换为LF，检出时转换为CRLF
+    git config --global core.autocrlf true   
+
+    #提交时转换为LF，检出时不转换
+    git config --global core.autocrlf input   
+
+    #提交检出均不转换
+    git config --global core.autocrlf false
+    二、SafeCRLF
+
+    #拒绝提交包含混合换行符的文件
+    git config --global core.safecrlf true   
+
+    #允许提交包含混合换行符的文件
+    git config --global core.safecrlf false   
+
+    #提交包含混合换行符的文件时给出警告
+    git config --global core.safecrlf warn
 
 
 ##配置key
