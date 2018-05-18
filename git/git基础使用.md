@@ -78,4 +78,3 @@
 
 + git中的 origin master 是什么意思
     * 其中origin是远程主机的名字，master是他的分支名，这是默认的，可以修改。使用`git remote -v` 查看所有远程主机，`git remote show <主机名>` 可以看到详细信息。
-    
