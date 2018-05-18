@@ -3,7 +3,7 @@ refer: https://www.digitalocean.com/community/tutorials/initial-server-setup-wit
 一般来说初始登录都是 root，以 root 用户来操作服务器是极为不安全的，所以首要做的就是添加新用户
 
 1. 添加新用户
-    `adduser username`
+    `adduser username -p 密码`
 
 2. 对于默认添加的用户是没有 root 权限的，所以要赋予 root 权限
     
@@ -48,4 +48,11 @@ refer: https://www.digitalocean.com/community/tutorials/initial-server-setup-wit
 7. 使用 SFTP
     https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
     当你配置好 ssh 登陆之后，就可以使用 sftp 来传输文件了，下载一个支持SFTP协议的客户端（FileZilla），然后输入相关信息即可
+    
+8. 删除用户
+
+```
+userdel -r 用户名
+```
+
 

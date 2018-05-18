@@ -11,7 +11,6 @@
 1. 删除一个或多个连续的commit rebase
 
 2. 删除不连续的commit, Cherry Pick
-
 * git checkout b3d92c5 Checkout the last usable commit.
 * git checkout -b repair Create a new branch to work on.
 * git cherry-pick 77b9b82 Run through commit 3.

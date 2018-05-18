@@ -10,7 +10,6 @@ select * from zfix_test order by convert(name using gb2312)
 
 select distinct(id) from zfix_test where is_del='N';
 
-
 #### 将联合查询出的null值转化为0
 
 http://stackoverflow.com/questions/1037653/sql-left-join-return-0-rather-than-null
@@ -18,7 +17,6 @@ http://stackoverflow.com/questions/1037653/sql-left-join-return-0-rather-than-nu
 ```
 ISNULL(nullable, value_if_null) for MsSQL, COALESCE(nullable1, nullable2, ..., value_if_null) for MySQL.
 ```
-
 
 #### 将一行分解为多行
 
